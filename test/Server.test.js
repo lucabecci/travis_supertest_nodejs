@@ -8,7 +8,12 @@ describe("TDD - Server", function(){
   })
   it("index path async - Server", async function(){
     const response = await request(this.server).get("/")
-    console.log(response)
+    assert.deepEqual(
+      response.body.message, 
+      "Test of Travis CI with supertest and mocha"
+    )
+    assert.deepEqual(response.body.active, true)
+    assert.deepEqual(response.status, 200)
   })
 
   it("index path callback - Server", function(done){
