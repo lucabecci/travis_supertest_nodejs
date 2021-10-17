@@ -12,6 +12,8 @@
     "supertest": "^6.1.6"
   },
   "scripts": {
-    "test": "mocha --test 'tests/**.*.js' --grep"
+    "test": "mocha --test 'tests/**.*.js'",
+    "test-one": "mocha --test 'tests/**.*.js --grep'",
+    "start": "node Main.js"
   }
 }
